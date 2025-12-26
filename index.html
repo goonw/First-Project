@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>GOON day TWIN</title>
+</head>
+<body style="margin:0; height:100vh; display:flex; justify-content:center; align-items:center; font-family:Arial, sans-serif; background:linear-gradient(to bottom, #353535, #ffffff);">
+
+  <div style="text-align:center;">
+    <img src="goonmage/goonfile.jpg" 
+         alt="Sapi" 
+         style="width:300px; border-radius:20px; margin-bottom:40px; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);">
+  
+    <h1 style="font-size:48px; letter-spacing:3px; margin-bottom:20px; color:#ffffff;">GOONING STATION</h1>
+    <div style="margin-bottom:30px;">
+      <input type="number" id="idInput" placeholder="Kode Nuklir Kink" 
+             style="padding:10px; font-size:16px; width:180px; border-radius:5px; border:1px solid #ffffff;">
+      <button onclick="go()" 
+              style="padding:10px 15px; font-size:16px; border:none; border-radius:5px; background-color:#494949; color:rgb(255, 255, 255); cursor:pointer;">
+        GooN DAY
+      </button>
+    </div>
+    <div style="display:flex; justify-content:center; gap:15px;">
+
+    </div>
+     <div>
+    <button onclick="generateRandom()" style="padding:10px 15px; font-size:16px; border:none; border-radius:5px; background-color:#494949; color:white; cursor:pointer; margin-right:5px;">
+      The Lion Beat All
+    </button>
+  </div>
+  </div>
+
+  <script>
+    function go() {
+      const id = document.getElementById("idInput").value;
+      if (!id) return alert("Dimasukin Dulu Kink");
+
+      const BASE_URL = "https://nhentai.net/g/";
+      window.location.href = BASE_URL + id + "/";
+    }
+    // acak kink
+    function generateRandom() {
+      const randomNum = Math.floor(100000 + Math.random() * 900000);
+      document.getElementById("idInput").value = randomNum;
+    }
+  </script>
+
+</body>
+</html>
